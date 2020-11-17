@@ -1,0 +1,10 @@
+#Functional Decomposition
+
+#Vending Machine
+
+
+Give Snacks To Buyers
+  - Recieve id of the snack the buyers wants
+  - Recieve the appropirate amount of cash coressponding to the snack
+  - Push the snack out of held position into the placer at the bottom of the vending machine
+  
