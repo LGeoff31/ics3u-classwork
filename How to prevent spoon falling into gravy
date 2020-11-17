@@ -1,0 +1,8 @@
+# Functional Decomposition
+
+#How to prevent spoon falling into gravy
+
+
+- Have the spoon at a diagonal angle less than 45 degrees 
+- Have the top of the spoon be at least 5cm above the top of the container
+- Have a robot that will instantly catch the spoon if the top of the spoon ever reaches an altitude of anything less than 5cm from the bottom fo the container
