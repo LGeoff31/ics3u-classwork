@@ -1,0 +1,52 @@
+#Functional decomposition
+
+
+#Vending Machine
+
+
+Give Snacks To Buyers
+  - Recieve id of the snack the buyers wants
+  - Recieve the appropirate amount of cash coressponding to the snack
+  - Push the snack out of held position into the placer at the bottom of the vending machine
+  
+  
+  
+  
+#Waking up to go to school routine
+
+- Wake up
+- Get out of bed
+- Put on clothes
+- Wash face
+- Use toothbrush to brush your teeth
+  - brush one tooth, repeatly brush for each until all are brushed
+- If dirty or smelly, take shower
+- If smelly, put on deoderant
+- Go downstairs
+- Eat breakfast
+- Put nessasary equpiment in bag, repeat until everything is in bag
+- Apply bag on your shoulders 
+- Put on shoes
+- Open the door
+- Walk to school
+
+
+
+
+#How to fit cookie in glass
+
+- Take cookie out and break it in half, then dip
+- Buy smaller cookies that fit in the diameter of the cup
+- Buy a cup with a large enough diameter to fit the cookie
+- Have app that notifies you of all the cookies in the market that have a smaller diameter than the diamter of your cup
+
+
+
+
+
+#How to prevent spoon falling into gravy
+
+
+- Have the spoon at a diagonal angle less than 45 degrees 
+- Have the top of the spoon be at least 5cm above the top of the container
+- Have a robot that will instantly catch the spoon if the top of the spoon ever reaches an altitude of anything less than 5cm from the bottom fo the container
