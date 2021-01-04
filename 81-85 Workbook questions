@@ -1,0 +1,99 @@
+def main():
+    # 81 Finding the Hypotenuse
+    from math import sqrt
+
+    def find_hypotenuse() -> int:
+        a = int(input("Please enter a side lenth: "))
+        b = int(input("Please enter a side lenth: "))
+        
+        return int(sqrt(a ** 2 + b ** 2))
+
+    result = find_hypotenuse()
+    print(result)
+
+
+    # 82 Finding the Total Fare
+
+    def total_fare() -> int:
+        km = int(input('Please enter the amount of km: '))
+        return 4 + (km//0.140) * 0.25
+
+    result = total_fare()
+    print(result)
+
+
+    # 83 Shipping Price
+
+    def shipping_charge() -> int:
+        items = int(input('Please enter the amount of items you have'))
+        return 10.95 + (items-1) * 2.95
+
+    result = shipping_charge()
+    print(result)
+
+
+    # 84 Finding Median
+
+    def median() -> int:
+        a = int(input('Please enter a integer: '))
+        b = int(input('Please enter a integer: '))
+        c = int(input('Please enter a integer: '))
+        if a >= b >= c:
+            middle_num = b
+        elif a >= c >= b:
+            middle_num = c
+        elif b >= a >= c:
+            middle_num = a
+        elif b >= c >= a:
+            middle_num = c
+        elif c >= a >= b:
+            middle_num = a
+        else:
+            middle_num = b
+        return middle_num
+
+    result = median()
+    print(result)
+            
+
+    # 85 Original Number 
+
+    def original() -> str:
+        string = ''
+        a = int(input("Please enter a integer: "))
+        if a == 1:
+            string += 'first'
+        elif a == 2:
+            string += 'second'
+        elif a == 3:
+            string += 'third'
+        elif a == 4:
+            string += 'fourth'
+        elif a == 5:
+            string += 'fifth'
+        elif a == 6:
+            string += 'sixth'
+        elif a == 7:
+            string += 'seventh'
+        elif a == 8:
+            string += 'eighth'
+        elif a == 9:
+            string += 'ninth'
+        elif a == 10:
+            string += 'tenth'
+        elif a == 11: 
+            string += 'eleventh'
+        elif a == 12:
+            string += 'twelfth'
+        else:
+            pass
+        
+        return string
+
+    result = original()
+    print(result)
+        
+        
+
+if __name__ == "__main__":
+    main()
