@@ -1,0 +1,152 @@
+def main():
+    # 81 Finding the Hypotenuse
+    from math import sqrt
+
+    def find_hypotenuse() -> int:
+        while True:
+            try:
+                a = float(input("Please enter a side lenth: "))
+                if a <= 0:
+                    raise ValueError
+                break
+            except ValueError:
+                print('Invalid number.')
+        while True:
+            try:
+                b = float(input("Please enter a side lenth: "))
+                if b <= 0:
+                    raise ValueError
+                break
+            except ValueError:
+                print('Invalid number.')
+        
+        return float(sqrt(a ** 2 + b ** 2))
+
+    result = find_hypotenuse()
+    print(f" The hypotenuse is {result}")
+
+
+    # 82 Finding the Total Fare
+
+    def total_fare() -> int:
+        while True:
+            try:
+                km = int(input('Please enter the amount of km: '))
+                if km < 0:
+                    
+                    raise ValueError
+                break
+            except ValueError:
+                print("That isn't a number or not a positive number.")
+        return 4 + (km//0.140) * 0.25
+
+    result = total_fare()
+    print(f" Cost is ${result}")
+
+
+    # 83 Shipping Price
+
+    def shipping_charge() -> int:
+        while True:
+            try:
+                items = int(input('Please enter the amount of items you have: '))
+                if items <= 0:
+                    raise ValueError
+                break
+            except ValueError:
+                print("That isn't a number or it isn't a positive number.")
+            
+        return 10.95 + (items-1) * 2.95
+
+    result = shipping_charge()
+    print(f"Cost is ${result}")
+
+
+    # 84 Finding Median
+
+    def median() -> int:
+        while True:
+            try:
+                a = int(input('Please enter a integer: '))
+            except ValueError:
+                print('Not a number.')
+            try:
+                b = int(input('Please enter a integer: '))
+            except ValueError:
+                print('Not a number.')
+            try:
+                c = int(input('Please enter a integer: '))
+                break
+            except ValueError:
+                print('Not a number.')
+
+            
+
+        if a >= b >= c:
+            middle_num = b
+        elif a >= c >= b:
+            middle_num = c
+        elif b >= a >= c:
+            middle_num = a
+        elif b >= c >= a:
+            middle_num = c
+        elif c >= a >= b:
+            middle_num = a
+        else:
+            middle_num = b
+        return middle_num
+
+    result = median()
+    print(f"{result} is the median.")
+            
+
+    # 85 Original Number 
+
+    def original() -> str:
+        string = ''
+        while True:
+            try:
+                a = int(input("Please enter a integer from 1-12: "))
+                if a < 1 or a > 12:
+                    raise ValueError
+                break
+            except ValueError:
+                print('That is not a number or it is not a given option.')
+        if 0 >= a or a >= 13:
+                    raise ValueError
+        if a == 1:
+            string += 'first'
+        elif a == 2:
+            string += 'second'
+        elif a == 3:
+            string += 'third'
+        elif a == 4:
+            string += 'fourth'
+        elif a == 5:
+            string += 'fifth'
+        elif a == 6:
+            string += 'sixth'
+        elif a == 7:
+            string += 'seventh'
+        elif a == 8:
+            string += 'eighth'
+        elif a == 9:
+            string += 'ninth'
+        elif a == 10:
+            string += 'tenth'
+        elif a == 11: 
+            string += 'eleventh'
+        elif a == 12:
+            string += 'twelfth'
+
+    
+        
+        return string
+
+    result = original()
+    print(result)
+        
+        
+
+if __name__ == "__main__":
+    main()
