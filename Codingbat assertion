@@ -1,0 +1,47 @@
+#Assertion questions
+
+def test_sleep_in():
+    assert sleep_in(False, False) == True
+    sleep_in(False, True) == True		
+    sleep_in(True, True) == True
+
+
+def test_monkey_trouble():
+    assert monkey_trouble(True, True) == True
+    assert monkey_trouble(False, False) == True
+
+def sum_double(a, b):
+    assert sum_double(5,5) == 50
+    assert sum_double(0, 1) → 1	
+    assert sum_double(3, 4) → 7
+
+def diff21(n):
+    assert diff21(12) == 9
+    assert diff21(-1) → 22	
+    assert diff21(-2) → 23
+  
+def parrot_trouble(talking, hour):
+  assert parrot_trouble(True, 23) == True
+
+def near_hundred():
+
+    assert near_hundred(111) == False	
+    assert near_hundred(121) == False
+
+
+def pos_neg():
+    assert pos_neg(1, 1, False) == False
+    assert pos_neg(-1, -1, False) == False
+
+def not_string():
+
+    assert not_string('not bad') == 'not bad'    
+    assert not_string('bad') == 'not bad'
+
+def missing_chair():
+    assert missing_char('Hi', 1) == 'H'      
+    assert missing_char('code', 0) == 'ode
+
+def front_back():
+    assert front_back('abc') == 'cba'	
+    assert front_back('') == ''
