@@ -1,0 +1,49 @@
+def get_positive_number(prompt: str) ->float:
+    while True:
+        try:
+            num = float(input(prompt))
+            if num < 0:
+                raise ValueError
+            break
+        except ValueError:
+            print('Invalid number')
+    return num
+
+
+def get_string(string: str) -> str:
+    while True:
+        try:
+            string = input(string)
+            break
+        except NameError:
+            print('Invalid string')
+    return string
+
+
+def calculate(string:str, width:int) -> str:
+    result = ''
+    for i in range(len(string)):
+        while True:
+            try:
+                result += string[i]
+                if len(result) > width:
+                    break
+            except IndexError:
+                result += string[i]
+    return result
+
+
+def exercise_87():
+    string = get_string('Please enter a string: ')
+    width = get_positive_number('Please enter a number: ')
+    result = calculate(string, width)
+    print(result)
+
+exercise_87()
+
+def tests():
+    assert center_string("a", 3) == " a"
+    assert center_string("aa", 4) == " aa"
+    assert center_string("b", 5) == "  b"
+    assert center_string("hello", 11) == "   hello"
+    print("all passed!")
