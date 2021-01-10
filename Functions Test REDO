@@ -1,0 +1,174 @@
+#main.py
+
+
+from typing import List
+
+
+def get_name(prompt:str) -> str:
+    """ Stores a name value
+    
+    Args:
+        prompt: Recieves given name that is valid
+    
+    Return:
+        Returns the name
+    """
+    while True:
+        name = input(prompt)
+        if len(name) < 2 or len(name) > 15:
+            print('That is not a name')
+        else:
+            break
+    
+    return name
+
+
+def greeting(name:str) -> str:
+    """ Greets the user
+
+    Args:
+        name: Valid name of the user
+    
+    Return:
+        Returns greeting with the users name
+    """
+
+    return f"Hello {name}. Welcome to the Markbook program."
+
+
+def get_number(prompt:int) -> int:
+    """ Stores an integer
+
+    Args:
+        prompt: Recieves a positive integer
+    
+    Return:
+        Returns the integer
+    """
+
+    while True:
+        try:
+            number = int(input(prompt))
+            if number < 0:
+                raise ValueError
+            break
+        except ValueError:
+            print('That is not a valid integer')
+    return number
+
+
+def display_report(students:List, marks:List) -> str:
+    """ Displays the report of the students
+    
+    Args:
+        students: List of student names
+        marks: List of student marks
+    
+    Return:
+        Returns the student name along with the students mark
+    """
+
+    for i in range(len(students)):
+        print(students[i], marks[i])
+
+
+def number_failing(marks_lst:List) -> int:
+    """ Determines the amount of failing grades
+    
+    Args:
+        marks_lst: List of student marks
+    
+    Return:
+        Returns the number of marks that are failing
+    """
+
+    fails = 0
+    for i in range(len(marks_lst)):
+        if marks_lst[i] < 50:
+            fails += 1
+    return fails
+
+
+def student_list(students:int) -> str:
+    """ Displays the report of students
+    
+    Args:
+        students: Amount of students
+
+    Return:
+        The report of each student
+    """
+
+    students_lst = []
+    marks_lst = []
+    for i in range(students):
+        name = get_name(f'Please enter student {i+1} name: ')
+        mark = get_number(f'Please enter the grade that student got: ')
+        students_lst.append(name)
+        marks_lst.append(mark) 
+    report = students_lst, marks_lst
+    return report
+
+def class_average(marks_lst:List) -> float:
+    """ Determines the class average mark
+    
+    Args:
+        marks_lst: List of student marks
+    
+    Return:
+        Returns the average of the marks
+    """
+
+    average = sum(marks_lst) / len(marks_lst)
+    average = round(average, 2)
+    return average
+
+
+
+
+def main():
+    print('Hello Kind Teacher')
+    print()
+    name = get_name("Please enter your name: ")
+    greet = greeting(name)
+    print(greet)
+    print('\n \n')
+    students = get_number('How many students would you like to mark: ')
+    a = student_list(students)
+    students_lst = a[0]
+    marks_lst = a[1]
+    print(display_report(students_lst, marks_lst))
+    fails = number_failing(marks_lst)
+    print(f'{fails} people are failing.')
+    average = class_average(marks_lst)
+    print(f"The class average is {average}%")
+
+
+
+if __name__ == "__main__":
+    main()
+    
+    
+    
+    
+    
+#test_main.py
+
+from typing import List
+
+from main import greeting, number_failing, class_average
+
+def test_greeting():
+    assert greeting('Geoffrey') == "Hello Geoffrey. Welcome to the Markbook program."
+    assert greeting('Tom') == "Hello Tom. Welcome to the Markbook program."
+    assert greeting('Wilson') == "Hello Wilson. Welcome to the Markbook program."
+
+def test_number_failing():
+    assert number_failing([34,98,65,23,86]) == 2
+    assert number_failing([0]) == 1
+    assert number_failing([34,98, 4, 32, 21]) == 4
+
+def test_class_average():
+    assert class_average([34,84,23,93]) == 58.5
+    assert class_average([34,92,54,75]) == 63.75
+    assert class_average([56,84,24,8,0,3]) == 29.17
